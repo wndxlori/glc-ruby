@@ -30,9 +30,9 @@
           with Ruby
         </h1>
         <p>
-          Dessy Daskalov
+          Lori M Olson
           <br>
-          @dess_e
+          @wndxlori
         </p>
       </article>
       
@@ -90,6 +90,14 @@
         </div>
       </article>
       <article>
+        <p class='large-font'>This is some code in Ruby:</p>
+        <section>
+          <pre>
+puts 'Hello, World!'
+</pre>
+        </section>
+      </article>
+      <article>
         <p class='large-font'>This is some code in Java:</p>
         <section>
           <pre>
@@ -98,14 +106,6 @@ class Howdy {
         System.out.println("Hello, World!");
     }
 }
-</pre>
-        </section>
-      </article>
-      <article>
-        <p class='large-font'>This is some code in Ruby:</p>
-        <section>
-          <pre>
-puts 'Hello, World!'
 </pre>
         </section>
       </article>
@@ -635,13 +635,36 @@ puts 'Hello, World!'
           #ruby-output .large-font { margin: 50px 0px; }
         </style>
         <h3>
-          Outputting Text to the Screen
+          Conversations with your computer
         </h3>
         <p class='large-font'>IRB is like back-and-forth text messaging.</p>
         <p class='large-font'>A program has to be told when to output something with <b>puts</b>.</p>
         <p class='large-font'>Let's try a few more examples together.</p>
       </article>
-      
+
+      <article>
+        <h3>
+          Computer talking to us
+        </h3>
+        <div class='build'>
+          <p>
+            <pre> > puts "hello" + "there"
+hellothere
+=> nil</pre>
+          </p>
+          <p>
+            <pre> > puts "hello".upcase
+HELLO
+=> nil</pre>
+          </p>
+          <p>
+            <pre> > puts "hello".reverse
+olleh
+=> nil</pre>
+          </p>
+        </div>
+      </article>
+
       <article id='puzzle-one'>
         <style>
           #puzzle-one .large-font { margin: 100px 0px; }
@@ -654,19 +677,16 @@ puts 'Hello, World!'
         <p>(Answers in answers/puzzle_answer.txt, but don't look!)</p>
       </article>
       
-      <article id='real-twitter'>
+      <article id='ruby-input'>
         <style>
-          #real-twitter .large-font { margin: 60px 0px; }
+          #ruby-input .large-font { margin: 60px 0px; }
         </style>
         <h3>
           Getting Input From the User
         </h3>
-        <p>The real Twitter...</p>
-        <div class='build'>
-          <p class='large-font'>Asks you to type something.</p>
-          <p class='large-font'>Tells you how many characters you're working with.</p>
-          <p>So far, we've just been putting our tweet directly into the program.</p>
-        </div>
+        <p>We talked about a conversation. The computer only talks to us.  How do we talk to the computer?</p>
+        <section class='build'>
+          <div><pre>gets</pre></div>
       </article>
       
       <article>
@@ -675,7 +695,7 @@ puts 'Hello, World!'
         </h3>
         <p>The <b>puts</b> method is used for output, and the <b>gets</b> method is used for input. Try this:</p>
         <p>The gets method warns Ruby that you're about to speak.</p>
-        <pre>> tweet = gets</pre>
+        <pre>> words = gets</pre>
         <pre class='all-string'>I'm learning Ruby with Ruby Robot</pre>
         <section class='build'>
           <div>
@@ -693,7 +713,7 @@ puts 'Hello, World!'
           The \n is there because you hit the enter button after you typed your tweet.
           To get rid of it, do this:
         </p>
-        <pre>> tweet = gets.chomp</pre>
+        <pre>> words = gets.chomp</pre>
         <pre class='all-string'>I'm learning Ruby with Ruby Robot</pre>
         <section class='build'>
           <pre>=> "I'm learning Ruby with Ruby Robot"</pre>
@@ -712,6 +732,26 @@ puts 'Hello, World!'
         <p class='large-font'>Do you remember how to run a program?</p>
         <pre>ruby greeting.rb</pre>
       </article>
+      <article id='english-content'>
+        <style>
+          #english-content dt { font-weight: bolder }
+        </style>
+        <h3>
+          Warning!  English Content!
+        </h3>
+        <dl>
+          <dt>Plural</dt>
+          <dd>more than 1</dd>
+          <dt>Noun</dt>
+          <dd>person, place or thing</dd>
+          <dt>Verb</dt>
+          <dd>action</dd>
+          <dt>Adverb</dt>
+          <dd>modifier for an action</dd>
+          <dt>Adjective</dt>
+          <dd>describes a noun</dd>
+        </dl>
+      </article>
       
       <article id='input-madlib'>
         <style>
@@ -723,7 +763,6 @@ puts 'Hello, World!'
         <p class='large-font'>Now let's run <b>madlib1.rb</b> and <b>madlib2.rb</b> together.</p>
         <p>Mad Libs examples are from http://www.itsamadlibsworld.com/</p>
       </article>
-      
       <article id='create-madlib'>
         <style>
           #create-madlib .large-font { margin: 150px 0; }
